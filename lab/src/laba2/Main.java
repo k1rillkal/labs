@@ -21,10 +21,10 @@ public class Main {
 
         Sorting<Integer> insertion = new InsertionSort();
         Sorting<Integer> mergesort = new MergeSort();
-//        insertion.sort(arr);
+        insertion.sort(arr);
         System.out.println(arr);
-        mergesort.sort(arr);
-        System.out.println(arr);
+        //mergesort.sort(arr);
+        //System.out.println(arr);
 
     }
 }
