@@ -16,15 +16,15 @@ public class RadixSort implements Sorting<BigInteger> {
                 count[digit]++;
             }
 
-            // Считаем накопленные количества
+            
             for (int i = 1; i < 10; i++) {
                 count[i] += count[i - 1];
             }
 
-            // Создаём массив для отсортированных чисел
+            
             BigInteger[] out = new BigInteger[nums.size()];
 
-            // Расставляем числа по местам, начиная с конца
+            
             for (int i = nums.size() - 1; i >= 0; i--) {
                 BigInteger num = nums.get(i);
 
@@ -33,7 +33,7 @@ public class RadixSort implements Sorting<BigInteger> {
                 out[--count[digit]] = num;
             }
 
-            // Переносим результат обратно в список
+            
             for (int i = 0; i < nums.size(); i++) {
                 nums.set(i, out[i]);
             }
